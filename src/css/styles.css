@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    font-family: "Bebas Neue";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 295px;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+h1{
+    font-size: 60px;
+    margin-bottom: 100px;
+}
+
+
+/* Animação da imagem*/
+
+
+/* Transição suave para os efeitos */
+.container img {
+    margin: 0 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Quando o mouse passa por cima de uma imagem */
+.container img:hover {
+    scale: 1.1;
+    z-index: 1; /* Para garantir que a imagem "selecionada" fique à frente */
+    filter: none; /* Remove qualquer filtro da imagem selecionada */
+}
+
+/* Efeito para as imagens não selecionadas */
+.container:hover img {
+    filter: grayscale(100%) blur(2px); /* Deixa as imagens cinzas e desfocadas */
+    scale: 0.9; /* Opcional: reduz ligeiramente o tamanho das outras imagens */
+}
+
+/* Remove o efeito da imagem sob o mouse */
+.container:hover img:hover {
+    filter: none; /* Remove o filtro da imagem "selecionada" */
+    scale: 1.1; /* Mantém o destaque na imagem selecionada */
+    z-index: 2; /* Eleva a imagem selecionada */
+}
